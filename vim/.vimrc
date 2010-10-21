@@ -12,10 +12,11 @@ set ruler " put meaningful information in the bottom line of your window
 set ignorecase "ignore case in searches
 set nu "Display line numbers
 set showmatch "show () {} and [] matches while writing.
+set ofu=syntaxcomplete#Complete "Omnicomplete
 
 filetype plugin on
 syntax on
- 
+
 " Source the vimrc file after saving it
 " Commented here so I can make repo edits without sourcing $MYVIMRC  
 " if has("autocmd")
