@@ -7,12 +7,17 @@ set softtabstop=2
 set expandtab
 
 " Misc
-set showcmd " show the unfinished command-mode command
-set ruler " put meaningful information in the bottom line of your window
+set showcmd "show the unfinished command-mode command
+set showmode "show me when I'm in overtype/insert mode
+set ruler "put meaningful information in the bottom line of your window
 set ignorecase "ignore case in searches
 set nu "Display line numbers
 set showmatch "show () {} and [] matches while writing.
 set ofu=syntaxcomplete#Complete "Omnicomplete
+set spelllang=en_us	"spell check english
+set hlsearch "highlight all matches in search when searching	
+set nowrap "don't wrap text
+set wildmenu "magic completion at : command line	
 
 filetype plugin on
 syntax on
