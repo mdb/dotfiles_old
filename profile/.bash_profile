@@ -13,10 +13,14 @@ export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-#Put Android stuff in my path
 export PATH=${PATH}:android-sdk-mac_x86/tools
 
 source ~/.bashrc
 
 # uninstall that peice of shit Mcafee
 alias mcafee="sudo /usr/local/McAfee/uninstallMSC"
+
+# Reveal all unversioned files in svn repo: 
+alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?      //'"
+# Delete all unversioned files in svn repo:
+alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?      //'  | xargs rm -rf"
