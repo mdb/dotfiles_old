@@ -21,6 +21,6 @@ source ~/.bashrc
 alias mcafee="sudo /usr/local/McAfee/uninstallMSC"
 
 # Reveal all unversioned files in svn repo: 
-alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?      //'"
+alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?//'"
 # Delete all unversioned files in svn repo:
-alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?      //'  | xargs rm -rf"
+alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?//'  | xargs rm -rf"
