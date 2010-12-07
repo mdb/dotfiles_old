@@ -26,6 +26,7 @@ alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?//'"
 alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?//'  | xargs rm -rf"
 
 # A fast way to selectively include/exclude files in a Subversion commit 
+# More info here: https://gist.github.com/732362
 function smartcommit() {
   svn stat > /tmp/svn_commits.tmp
   vim /tmp/svn_commits.tmp
