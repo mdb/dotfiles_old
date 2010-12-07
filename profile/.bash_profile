@@ -24,3 +24,11 @@ alias mcafee="sudo /usr/local/McAfee/uninstallMSC"
 alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?//'"
 # Delete all unversioned files in svn repo:
 alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?//'  | xargs rm -rf"
+
+# A fast way to selectively include/exclude files in a Subversion commit 
+function smartcommit() {
+  svn stat > /tmp/svn_commits.tmp
+  vim /tmp/svn_commits.tmp
+  svn commit `cat /tmp/svn_commits.tmp | cut -d' ' -f2- | xargs`
+  rm /tmp/svn_commits.tmp
+}
