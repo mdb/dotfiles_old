@@ -4,14 +4,14 @@ Basic backup of some dotfiles and and utilities.
 
 h1. Installation
 
-h2. Copy these files to your home directory:
+*Copy these files to your home directory:*
 
 * .bashrc
 * .bash_profile
 * .vimrc
 * .gvimrc
 
-h2. Copy these files to your .subversion directory:
+*Copy these files to your .subversion directory:*
 
 * .subversion/config
 * .subversion/svn-editor.script (Used for auto commit message formatting)
