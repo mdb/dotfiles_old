@@ -37,4 +37,4 @@ export PYTHONPATH=~/lib/python2.6/site-packages # Did this because I installed p
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session.
 
-export PS1='\033[35m\]\w\[\033[00m\]$(__git_svn_ps1)\[\033[00m\] > ' # Add the git branch to the prompt
+export PS1='\033[35m\]\w\[\033[00m\]\[\e[1;32m\]$(__git_svn_ps1)\e[0m\]\[\033[00m\] > ' # Add the git branch to the prompt
