@@ -58,4 +58,4 @@ export PATH=$M2:$PATH
 # Loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export PS1="\n$PINK\w:$GREEN\$(parse_git_branch)\$(parse_svn_repo)\n$NORMAL$ "
+export PS1="\n$PINK\w:$GREEN\$(parse_git_branch)\$(parse_svn_repo)\n$RED$ $NORMAL"
