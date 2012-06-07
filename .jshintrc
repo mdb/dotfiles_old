@@ -1,0 +1,9 @@
+{
+  "asi": true,
+  "browser": true,
+  "node": true,
+  "jquery": true,
+  "strict": false,
+  "undef": true,
+  "predef": ["_"]
+}
