@@ -39,6 +39,14 @@ function parse_svn_repo {
   echo " ($root:$revision)"
 }
 
+function git_out {
+  for i in $(git push -n $* 2>&1 \
+    | awk '$1 ~ /[a-f0-9]+\.\.[a-f0-9]+/ { print $1; }')
+  do
+    git log --oneline $i
+  done
+}
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
