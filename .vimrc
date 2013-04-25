@@ -21,6 +21,10 @@ set wildmenu "magic completion at : command line
 set nobackup "no backup
 set noswapfile "no swap file
 set mouse=niv
+set background=dark
+let g:solarized_termcolors="16"
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
 " set mouse=a
 " set clipboard=unnamed
 
@@ -36,7 +40,6 @@ endif
 au BufNewFile,BufRead *.rhtml set syn=eruby "Ruby HTML
 au BufNewFile,BufRead *.ftl set syn=ftl "Freemarker
 au BufNewFile,BufRead *.pde set syn=pde "Processing
-au BufRead,BufNewFile *.js set ft=javascript syn=jquery "JavaScript (does this jQuery thing even work?)
 
 " Mappings
 " Clear search highlighting with ,/
