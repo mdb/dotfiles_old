@@ -20,6 +20,9 @@ set nowrap "don't wrap text
 set wildmenu "magic completion at : command line	
 set nobackup "no backup
 set noswapfile "no swap file
+set mouse=niv
+" set mouse=a
+" set clipboard=unnamed
 
 filetype plugin on
 syntax on
@@ -37,3 +40,6 @@ au BufRead,BufNewFile *.js set ft=javascript syn=jquery "JavaScript (does this j
 " Mappings
 " Clear search highlighting with ,/
 nmap <silent> ,/ :nohlsearch<CR>
+
+" Pathogen support
+execute pathogen#infect()
