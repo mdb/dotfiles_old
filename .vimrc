@@ -26,6 +26,7 @@ set mouse=niv
 
 filetype plugin on
 syntax on
+colorscheme solarized
 
 " Source the vimrc file after saving it
 if has("autocmd")
