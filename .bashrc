@@ -1,13 +1,3 @@
-export GREP_OPTIONS='--color=auto' # Add color to grep
-
-shopt -s dotglob # Allow files starting with dot (.) to be returned in path name expansion
-
-export CLICOLOR=1
-
-alias mcafee="sudo /usr/local/McAfee/uninstallMSC" # uninstall that peice of shit Mcafee
-alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?//'" # Reveal all unversioned files in svn repo: 
-alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?//'  | xargs rm -rf" # Delete all unversioned files in svn repo:
-
 function smartcommit() {
   # A fast way to selectively include/exclude files in a Subversion commit 
   svn stat > /tmp/svn_commits.tmp
@@ -47,23 +37,30 @@ function git_out {
   done
 }
 
+# Add color to grep
+export GREP_OPTIONS='--color=auto'
+
+# Allow files starting with dot (.) to be returned in path name expansion
+shopt -s dotglob
+
+# Reveal all unversioned files in svn repo: 
+alias svndirt="svn status --no-ignore | grep '^\?' | sed 's/^\?//'"
+
+# Delete all unversioned files in svn repo:
+alias svnsweep="svn status --no-ignore | grep '^\?' | sed 's/^\?//'  | xargs rm -rf"
+
+# colors
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NORMAL="\[\033[0m\]"
 PINK="\033[35m\]"
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-
-export PATH=~/bin:/opt/local/bin:/opt/local/sbin:android-sdk-mac_x86/tools:/usr/local/tomcat/bin:/usr/local/Cellar/python/2.7.1/bin:$PATH
-
-#export PYTHONPATH=~/lib/python2.6/site-packages # Did this because I installed phpsh locally, per these instructions: https://github.com/facebook/phpsh
-
-export M2_HOME=/usr/local/apache-maven/apache-maven-2.2.1 # CIM stuff needs this maven
-export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
-
 # Loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export RVM_PATH=$HOME/.rvm/bin
+export LOCAL_BIN=/usr/local/bin
+export PATH=$LOCAL_BIN:$PATH
 
 export PS1="\n$PINK\w:$GREEN\$(parse_git_branch)\$(parse_svn_repo)\n$RED$ $NORMAL"
