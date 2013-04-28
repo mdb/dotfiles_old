@@ -5,8 +5,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-
-" Misc
 set showcmd "show the unfinished command-mode command
 set showmode "show me when I'm in overtype/insert mode
 set ruler "put meaningful information in the bottom line of your window
@@ -20,30 +18,27 @@ set nowrap "don't wrap text
 set wildmenu "magic completion at : command line	
 set nobackup "no backup
 set noswapfile "no swap file
+" set mouse=a
 set mouse=niv
 set background=dark
-let g:solarized_termcolors="16"
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
-" set mouse=a
-" set clipboard=unnamed
+set clipboard=unnamed
 
 filetype plugin on
 syntax on
-colorscheme solarized
+colorscheme acidcupcake
+
+au BufNewFile,BufRead *.rhtml set syn=eruby "Ruby HTML
+au BufNewFile,BufRead *.ftl set syn=ftl "Freemarker
+au BufNewFile,BufRead *.pde set syn=pde "Processing
+
+" Clear search highlighting with ,/
+nmap <silent> ,/ :nohlsearch<CR>
+
+" Pathogen support
+execute pathogen#infect()
 
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-au BufNewFile,BufRead *.rhtml set syn=eruby "Ruby HTML
-au BufNewFile,BufRead *.ftl set syn=ftl "Freemarker
-au BufNewFile,BufRead *.pde set syn=pde "Processing
-
-" Mappings
-" Clear search highlighting with ,/
-nmap <silent> ,/ :nohlsearch<CR>
-
-" Pathogen support
-execute pathogen#infect()
