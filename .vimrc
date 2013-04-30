@@ -31,8 +31,10 @@ au BufNewFile,BufRead *.rhtml set syn=eruby "Ruby HTML
 au BufNewFile,BufRead *.ftl set syn=ftl "Freemarker
 au BufNewFile,BufRead *.pde set syn=pde "Processing
 
-" Clear search highlighting with ,/
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> ,/ :nohlsearch<CR> " Clear search highlighting with ,/
+map <C-l> :tabn<CR> " Control-l to navigate to the next tab
+map <C-h> :tabp<CR> " Control-h to navigate to the next tab
+map <C-n> :tabnew<CR> " Control-n to open new tab
 
 " Pathogen support
 execute pathogen#infect()
