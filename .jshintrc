@@ -5,5 +5,5 @@
   "jquery": true,
   "strict": false,
   "undef": true,
-  "predef": ["Backbon", "_", "it", "before", "after", "describe", "beforeEach"]
+  "predef": ["define", "Backbon", "_", "it", "expect", "before", "after", "describe", "beforeEach"]
 }
