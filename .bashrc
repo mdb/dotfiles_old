@@ -37,9 +37,6 @@ function git_out {
   done
 }
 
-# Add color to grep
-export GREP_OPTIONS='--color=auto'
-
 # Allow files starting with dot (.) to be returned in path name expansion
 shopt -s dotglob
 
@@ -59,8 +56,15 @@ PINK="\033[35m\]"
 # Loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Add color to grep
+export GREP_OPTIONS='--color=auto'
+
+# Add color to terminal
+export TERM="xterm-256color"
+
 export RVM_PATH=$HOME/.rvm/bin
 export LOCAL_BIN=/usr/local/bin
 export PATH=$LOCAL_BIN:$PATH
+export PATH="$PATH:./node_modules/.bin"
 
 export PS1="\n$PINK\w:$GREEN\$(parse_git_branch)\$(parse_svn_repo)\n$RED$ $NORMAL"
