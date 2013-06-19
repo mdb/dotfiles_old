@@ -30,8 +30,9 @@ au BufNewFile,BufRead *.rhtml set syn=eruby "Ruby HTML
 au BufNewFile,BufRead *.ftl set syn=ftl "Freemarker
 au BufNewFile,BufRead *.pde set syn=pde "Processing
 au BufNewFile,BufRead Rakefile set syn=ruby "Ruby
-au BufNewFile,BufRead Gemfile set syn=ruby "Ruby
-au BufNewFile,BufRead Vagrantfile set syn=ruby "Ruby
+au BufNewFile,BufRead *.ru set syn=ruby "Rack up
+au BufNewFile,BufRead Gemfile set syn=ruby
+au BufNewFile,BufRead Vagrantfile set syn=ruby
 au BufNewFile,BufRead *.json set syn=javascript "JSON
 
 nmap <silent> ,/ :nohlsearch<CR> "Clear search highlighting with ,/
