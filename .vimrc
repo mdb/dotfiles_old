@@ -21,7 +21,6 @@ set noswapfile "no swap file
 " set mouse=a
 set mouse=niv
 set background=dark
-set clipboard=unnamed
 
 filetype plugin on
 syntax on
@@ -35,10 +34,12 @@ au BufNewFile,BufRead Gemfile set syn=ruby "Ruby
 au BufNewFile,BufRead Vagrantfile set syn=ruby "Ruby
 au BufNewFile,BufRead *.json set syn=javascript "JSON
 
-nmap <silent> ,/ :nohlsearch<CR> " Clear search highlighting with ,/
-map <C-l> :tabn<CR> " Control-l to navigate to the next tab
-map <C-h> :tabp<CR> " Control-h to navigate to the next tab
-map <C-n> :tabnew<CR> " Control-n to open new tab
+nmap <silent> ,/ :nohlsearch<CR> "Clear search highlighting with ,/
+map <C-l> :tabn<CR> "Control-l to navigate to the next tab
+map <C-h> :tabp<CR> "Control-h to navigate to the next tab
+map <C-n> :tabnew<CR> "Control-n to open new tab
+vmap <C-x> :!pbcopy<CR> "Control-x from visual mode to cut and copy to clipboard
+vmap <C-c> :w !pbcopy<CR><CR> "Control-c from visual mode to copy to clipboard
 
 " Pathogen support
 execute pathogen#infect()
