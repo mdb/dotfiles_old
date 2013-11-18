@@ -1,4 +1,6 @@
-h1. About 
+h1. About
+
+NOTE: This is all old; I'm now using [profile](http://github.com/mdb/profile).
 
 Basic backup of some dotfiles and and utilities.
 
